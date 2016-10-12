@@ -83,8 +83,6 @@ class CheetahMailAPI {
 		//Submit the request
 		$response = CheetahMailAPI::submitRequest($url, $cookie);
 
-		var_dump($response);
-
 		//Check the response
 		if(strpos($response, 'err') !== false) {
 			throw new Exception('Could not add user to campaign. Reason: ' . $response);
